@@ -10,19 +10,9 @@ This is a Flutter-based weather application that provides real-time weather upda
 ## Screenshots
 Here are some screenshots of the application:
 
-### 1. Home Screen
-<img src="assets/images/Capture1.PNG" alt="Home Screen" width="300">
-
-### 2. Weather Details
-<img src="assets/images/Capture2.PNG" alt="Weather Details" width="300">
-
-### 3. Weather Details
-<img src="assets/images/Capture3.PNG" alt="Weekly Forecast" width="300">
-
-### 4. Search Screen
-<img src="assets/images/Capture4.PNG" alt="Hourly Updates" width="300">
-
-
+| <img src="assets/images/Capture1.PNG" alt="Home Screen" width="200"> <br> **Home Screen** | <img src="assets/images/Capture2.PNG" alt="Weather Details" width="200"> <br> **Weather Details** |
+|------------------------------------------------|------------------------------------------------|
+| <img src="assets/images/Capture3.PNG" alt="Weekly Forecast" width="200"> <br> **Weekly Forecast** | <img src="assets/images/Capture4.PNG" alt="Search Screen" width="200"> <br> **Search Screen** |
 
 ## Installation
 1. Clone the repository:
