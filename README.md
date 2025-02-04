@@ -5,28 +5,26 @@ This is a Flutter-based weather application that provides real-time weather upda
 ## Features
 - 🌍 **Current Weather:** Displays the current weather of your location.
 - 🕒 **Hourly Forecast:** Get hourly weather updates.
-- 📅 **Weekly Forecast:** View the weather forecast for the week.
 - 🔄 **Refresh:** Updates weather data instantly.
 
 ## Screenshots
 Here are some screenshots of the application:
 
 ### 1. Home Screen
-![Home Screen](assets/images/Capture1.PNG)
+<img src="assets/images/Capture1.PNG" alt="Home Screen" width="300">
 
 ### 2. Weather Details
-![Weather Details](assets/images/Capture2.PNG)
+<img src="assets/images/Capture2.PNG" alt="Weather Details" width="300">
 
-### 3. Weekly Forecast
-![Weekly Forecast](assets/images/Capture3.PNG)
+### 3. Weather Details
+<img src="assets/images/Capture3.PNG" alt="Weekly Forecast" width="300">
 
-### 4. Hourly Updates
-![Hourly Updates](assets/images/Capture4.PNG)
+### 4. Search Screen
+<img src="assets/images/Capture4.PNG" alt="Hourly Updates" width="300">
 
-### 5. Location Selection
-![Location Selection](assets/images/Capture5.PNG)
+
 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/<repo-name>.git
+   git clone https://github.com/romisaa5/Weather_app.git
