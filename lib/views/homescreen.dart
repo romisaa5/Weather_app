@@ -21,7 +21,7 @@ class _HomescreenState extends State<Homescreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: getthemecolor(_weatherCondition), 
+        backgroundColor: getthemecolor(_weatherCondition),
         actions: [
           IconButton(
             onPressed: () {
@@ -40,7 +40,7 @@ class _HomescreenState extends State<Homescreen> {
               fontSize: 22,
               fontFamily: "second",
               fontWeight: FontWeight.bold,
-              color:  Color.fromARGB(255, 33, 32, 32),
+              color: Color.fromARGB(255, 33, 32, 32),
               shadows: [
                 Shadow(
                   blurRadius: 8.0,
@@ -56,7 +56,8 @@ class _HomescreenState extends State<Homescreen> {
         listener: (context, state) {
           if (state is WeatherLoadedState) {
             setState(() {
-              _weatherCondition = state.weatherModel?.weathercondition ?? 'default';
+              _weatherCondition =
+                  state.weatherModel?.weathercondition ?? 'default';
             });
           }
         },
@@ -71,12 +72,12 @@ class _HomescreenState extends State<Homescreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                 Text(
+                    Text(
                       'There was an error, Try Again',
                       style: TextStyle(fontFamily: 'second', fontSize: 23),
                     ),
                     SizedBox(height: 14),
-                    Image.asset('assets/images/icons8-search-60.png'),
+                    Image.asset('assets/images/searchicon.png'),
                   ],
                 ),
               );
