@@ -15,13 +15,13 @@ class Homescreen extends StatefulWidget {
 }
 
 class _HomescreenState extends State<Homescreen> {
-  String _weatherCondition = 'default'; // اللون الافتراضي
+  String _weatherCondition = 'default';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: getthemecolor(_weatherCondition), // استخدام اللون المحسوب
+        backgroundColor: getthemecolor(_weatherCondition), 
         actions: [
           IconButton(
             onPressed: () {
@@ -71,7 +71,7 @@ class _HomescreenState extends State<Homescreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                 Text(
                       'There was an error, Try Again',
                       style: TextStyle(fontFamily: 'second', fontSize: 23),
                     ),

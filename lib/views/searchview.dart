@@ -13,14 +13,11 @@ class Searchview extends StatelessWidget {
     return Scaffold(
       body: BlocBuilder<GetWeatherCubit, WeatherState>(
         builder: (context, state) {
-          // اللون الافتراضي
           MaterialColor defaultColor = Colors.blueGrey;
 
-          // لون الخلفية بناءً على حالة `Cubit`
           MaterialColor backgroundColor = defaultColor;
 
           if (state is WeatherLoadedState) {
-            // إذا تم تحميل بيانات الطقس بنجاح
             WeatherModel weatherModel = state.weatherModel;
             backgroundColor = getthemecolor(weatherModel.weathercondition);
           }

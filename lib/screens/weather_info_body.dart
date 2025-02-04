@@ -12,61 +12,64 @@ class WeatherInfoBody extends StatelessWidget {
   Widget build(BuildContext context) {
     WeatherModel weathermodel =
         BlocProvider.of<GetWeatherCubit>(context).weatherModel!;
-    return  Container(
+    return Container(
       decoration: BoxDecoration(
-        gradient: LinearGradient(colors:[getthemecolor(weathermodel.weathercondition),
-        getthemecolor(weathermodel.weathercondition)[300]!,
-        getthemecolor(weathermodel.weathercondition)[50]!,],
-          begin: Alignment.topCenter,end: Alignment.bottomCenter,)
-      ),
+          gradient: LinearGradient(
+        colors: [
+          getthemecolor(weathermodel.weathercondition),
+          getthemecolor(weathermodel.weathercondition)[300]!,
+          getthemecolor(weathermodel.weathercondition)[50]!,
+        ],
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+      )),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal:  16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                weathermodel.cityname,
-                style: const TextStyle(
-                    fontFamily: "second",
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold),
-              ),
-              Text(
-                'Updated at ${weathermodel.date.hour}:${weathermodel.date.minute}',
-                style: TextStyle(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              weathermodel.cityname,
+              style: const TextStyle(
                   fontFamily: "second",
-                  fontSize: 16,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'Updated at ${weathermodel.date.hour}:${weathermodel.date.minute}',
+              style: TextStyle(
+                fontFamily: "second",
+                fontSize: 16,
+              ),
+            ),
+            SizedBox(
+              height: 35,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Image.network("https:${weathermodel.image}"),
+                Text(
+                  " ${weathermodel.temp}",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-              ),
-              SizedBox(
-                height: 35,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.network("https:${weathermodel.image}"),
-                  Text(
-                    " ${weathermodel.temp}",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                  Column(
-                    children: [
-                      Text("Maxtemp: ${weathermodel.maxtemp.round()}"),
-                      Text("Mintemp: ${weathermodel.mintemp.round()}")
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Text(
-                weathermodel.weathercondition!,
-                style: TextStyle(fontFamily: "second", fontSize: 26),
-              )
-            ],
-          ),
-      
+                Column(
+                  children: [
+                    Text("Maxtemp: ${weathermodel.maxtemp.round()}"),
+                    Text("Mintemp: ${weathermodel.mintemp.round()}")
+                  ],
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Text(
+              weathermodel.weathercondition!,
+              style: TextStyle(fontFamily: "second", fontSize: 26),
+            )
+          ],
+        ),
       ),
     );
   }
